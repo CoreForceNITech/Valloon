@@ -56,40 +56,60 @@ class _LoginState extends State<Login> {
                   child: Center(
                     child: Column(
                       children: <Widget>[
-                        Text(
-                          'Valloon',
-                          style: TextStyle(
-                            color: Colors.green,
+                        Container(
+                          height: SizeConfig.blockSizeVertical! * 20,
+                          width: SizeConfig.blockSizeHorizontal! * 79,
+                          child: Column(
+                            children: <Widget>[
+                              Text(
+                                'Valloon',
+                                style: TextStyle(
+                                  color: Colors.green,
+                                  fontSize: 30,
+                                ),
+                              ),
+                              Text(
+                                '',
+                              ),
+                              Text(
+                                'サービスの利用を開始するためには、サインアップ(ログイン)が必要です。',
+                              ),
+                            ],
                           ),
-                        ),
-                        Text(
-                          'サービスの利用を開始するためには、サインアップ(ログイン)が必要です。',
                         ),
                         Row(
                           children: <Widget>[
-                            TextButton(
-                              child: Text(
-                                'Login',
-                                style: TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold,
+                            Container(
+                              height: SizeConfig.blockSizeVertical! * 9.5,
+                              width: SizeConfig.blockSizeHorizontal! * 39.5,
+                              child: RaisedButton(
+                                child: Text(
+                                  'Login',
+                                  style: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
+                                onPressed: () {
+                                  Func.movePage(context, Login());
+                                },
                               ),
-                              onPressed: () {
-                                Func.movePage(context, Login());
-                              },
                             ),
-                            TextButton(
-                              child: Text(
-                                'Sign Up',
-                                style: TextStyle(
-                                  color: Colors.green,
-                                  fontWeight: FontWeight.bold,
+                            Container(
+                              height: SizeConfig.blockSizeVertical! * 9.5,
+                              width: SizeConfig.blockSizeHorizontal! * 39.5,
+                              child: RaisedButton(
+                                child: Text(
+                                  'Sign Up',
+                                  style: TextStyle(
+                                    color: Colors.green,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
+                                onPressed: () {
+                                  Func.movePage(context, Login());
+                                },
                               ),
-                              onPressed: () {
-                                Func.movePage(context, Login());
-                              },
                             ),
                           ],
                         )
