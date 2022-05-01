@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/size_config.dart';
 
@@ -65,14 +66,15 @@ class _LoginState extends State<Login> {
                                 'Valloon',
                                 style: TextStyle(
                                   color: Colors.green,
-                                  fontSize: 30,
+                                  fontSize: 30.sp,
                                 ),
                               ),
                               Text(
                                 '',
                               ),
                               Text(
-                                'サービスの利用を開始するためには、サインアップ(ログイン)が必要です。',
+                                'サービスの利用を開始するためには、\nサインアップ(ログイン)が必要です。',
+                                textAlign: TextAlign.center,
                               ),
                             ],
                           ),
