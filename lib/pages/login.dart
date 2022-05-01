@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
-import 'package:valloon/function/size_config.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -12,7 +11,6 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     //web,Android上の戻るボタン
     return WillPopScope(
       onWillPop: () async {
@@ -25,7 +23,7 @@ class _LoginState extends State<Login> {
             Column(
               children: [
                 Container(
-                  height: SizeConfig.blockSizeVertical! * 60,
+                  height: 400.2.w,
                   width: double.infinity,
                   color: Colors.green,
                 )
@@ -34,34 +32,35 @@ class _LoginState extends State<Login> {
             Column(
               children: [
                 Container(
-                  height: SizeConfig.blockSizeVertical! * 10,
+                  height: 66.7.w,
                   width: double.infinity,
-                  color: Colors.green,
                 ),
                 Container(
-                  height: SizeConfig.blockSizeVertical! * 40,
-                  child: SvgPicture.asset('lib/images/valloon.svg',
-                      width: 320, height: 320),
+                  height: 266.8.w,
+                  width: 266.8.w,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.w),
+                  ),
                 ),
                 Container(
-                  height: SizeConfig.blockSizeVertical! * 5,
+                  height: 33.35.w,
                   width: double.infinity,
-                  color: Colors.green,
                 ),
                 Container(
-                  height: SizeConfig.blockSizeVertical! * 30,
-                  width: SizeConfig.blockSizeHorizontal! * 80,
+                  height: 201.w,
+                  width: 300.w,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(width: 1),
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10.w),
                   ),
                   child: Center(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: SizeConfig.blockSizeVertical! * 20,
-                          width: SizeConfig.blockSizeHorizontal! * 79,
+                          height: 133.4.w,
+                          width: 300.w,
                           child: Column(
                             children: <Widget>[
                               Text(
@@ -84,8 +83,8 @@ class _LoginState extends State<Login> {
                         Row(
                           children: <Widget>[
                             Container(
-                              height: SizeConfig.blockSizeVertical! * 9.5,
-                              width: SizeConfig.blockSizeHorizontal! * 39.5,
+                              height: 63.365.w,
+                              width: 148.125.w,
                               child: RaisedButton(
                                 child: Text(
                                   'Login',
@@ -100,8 +99,8 @@ class _LoginState extends State<Login> {
                               ),
                             ),
                             Container(
-                              height: SizeConfig.blockSizeVertical! * 9.5,
-                              width: SizeConfig.blockSizeHorizontal! * 39.5,
+                              height: 63.365.w,
+                              width: 148.125.w,
                               child: RaisedButton(
                                 child: Text(
                                   'Sign Up',
@@ -120,6 +119,22 @@ class _LoginState extends State<Login> {
                       ],
                     ),
                   ),
+                ),
+              ],
+            ),
+            Column(
+              children: <Widget>[
+                Container(
+                  height: 81.7.w,
+                  width: double.infinity,
+                ),
+                Container(
+                  child: SvgPicture.asset(
+                    'lib/images/valloon.svg',
+                    width: 256.8.w,
+                    height: 256.8.w,
+                  ),
+
                 ),
               ],
             ),
