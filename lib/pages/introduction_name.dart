@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/pages/introduction_birthday.dart';
 import 'package:valloon/pages/login.dart';
 
 class IntroductionName extends StatefulWidget {
@@ -42,14 +43,7 @@ class _IntroductionNameState extends State<IntroductionName> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Text(
-                  '名前を入力',
-                  style: TextStyle(
-                    fontSize: 24.sp,
-                    color: Colors.green,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Func.title('名前を入力'),
                 TextFormField(
                   controller: surnameController,
                   decoration: const InputDecoration(
@@ -102,14 +96,14 @@ class _IntroductionNameState extends State<IntroductionName> {
                   ),
                   child: SizedBox(
                     child: ElevatedButton(
-                        child: Text(
-                          '同意して登録',
-                          style: TextStyle(
-                            fontSize: 24.sp,
-                          ),
+                      child: Text(
+                        '同意して登録',
+                        style: TextStyle(
+                          fontSize: 24.sp,
                         ),
+                      ),
                       onPressed: () async {
-                        await Func.movePage(context, Login());
+                        await Func.movePage(context, IntroductionBirthday());
                       },
                     ),
                   ),

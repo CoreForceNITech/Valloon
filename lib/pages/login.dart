@@ -64,13 +64,7 @@ class _LoginState extends State<Login> {
                           width: 300.w,
                           child: Column(
                             children: <Widget>[
-                              Text(
-                                'Valloon',
-                                style: TextStyle(
-                                  color: Colors.green,
-                                  fontSize: 30.sp,
-                                ),
-                              ),
+                              Func.title('Valloon'),
                               Text(
                                 '',
                               ),
@@ -95,8 +89,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.white
-                                ),
+                                    primary: Colors.white),
                                 onPressed: () {
                                   Func.movePage(context, Login());
                                 },
@@ -114,10 +107,9 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.white
-                                ),
+                                    primary: Colors.white),
                                 onPressed: () {
-                                      Func.movePage(context, IntroductionName());
+                                  Func.movePage(context, IntroductionName());
                                 },
                               ),
                             ),
@@ -141,7 +133,6 @@ class _LoginState extends State<Login> {
                     width: 256.8.w,
                     height: 256.8.w,
                   ),
-
                 ),
               ],
             ),
