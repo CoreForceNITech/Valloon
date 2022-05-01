@@ -61,53 +61,7 @@ class _IntroductionNameState extends State<IntroductionName> {
                   ),
                 ),
                 Text(''),
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                      style: Theme.of(context).textTheme.bodyText2,
-                      children: const [
-                        TextSpan(
-                          text: '[同意して登録]をタップすると、',
-                        ),
-                        TextSpan(
-                          text: 'プライバシーポリシー',
-                          style: TextStyle(color: Colors.green),
-                        ),
-                        TextSpan(
-                          text: 'と',
-                        ),
-                        TextSpan(
-                          text: '利用規約',
-                          style: TextStyle(color: Colors.green),
-                        ),
-                        TextSpan(
-                          text: 'に同意したことになります。',
-                        ),
-                      ]),
-                ),
-                Container(
-                  height: 66.7.w,
-                ),
-                Container(
-                  height: 66.7.w,
-                  width: 225.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100.w),
-                  ),
-                  child: SizedBox(
-                    child: ElevatedButton(
-                      child: Text(
-                        '同意して登録',
-                        style: TextStyle(
-                          fontSize: 24.sp,
-                        ),
-                      ),
-                      onPressed: () async {
-                        await Func.movePage(context, IntroductionBirthday());
-                      },
-                    ),
-                  ),
-                ),
+                Func.consentProcess(context, IntroductionBirthday())
               ],
             ),
           ),

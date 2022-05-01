@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
             Column(
               children: [
                 Container(
-                  height: 400.2.w,
+                  height: 400.2.h,
                   width: double.infinity,
                   color: Colors.green,
                 )
@@ -33,34 +33,34 @@ class _LoginState extends State<Login> {
             Column(
               children: [
                 Container(
-                  height: 66.7.w,
+                  height: 66.7.h,
                   width: double.infinity,
                 ),
                 Container(
-                  height: 266.8.w,
+                  height: 266.8.h,
                   width: 266.8.w,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(20.w),
+                    borderRadius: BorderRadius.circular(20.r),
                   ),
                 ),
                 Container(
-                  height: 33.35.w,
+                  height: 33.35.h,
                   width: double.infinity,
                 ),
                 Container(
-                  height: 201.w,
+                  height: 201.h,
                   width: 300.w,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(width: 1),
-                    borderRadius: BorderRadius.circular(10.w),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
                   child: Center(
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 133.4.w,
+                          height: 133.4.h,
                           width: 300.w,
                           child: Column(
                             children: <Widget>[
@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: <Widget>[
                             Container(
-                              height: 63.365.w,
+                              height: 63.365.h,
                               width: 148.125.w,
                               child: ElevatedButton(
                                 child: Text(
@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
                               ),
                             ),
                             Container(
-                              height: 63.365.w,
+                              height: 63.365.h,
                               width: 148.125.w,
                               child: ElevatedButton(
                                 child: Text(
@@ -124,14 +124,14 @@ class _LoginState extends State<Login> {
             Column(
               children: <Widget>[
                 Container(
-                  height: 81.7.w,
+                  height: 81.7.h,
                   width: double.infinity,
                 ),
                 Container(
                   child: SvgPicture.asset(
                     'lib/images/valloon.svg',
                     width: 256.8.w,
-                    height: 256.8.w,
+                    height: 256.8.h,
                   ),
                 ),
               ],

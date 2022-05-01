@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/pages/introduction_birthday.dart';
+import 'package:valloon/pages/introduction_icon.dart';
 import 'package:valloon/pages/login.dart';
 
 class IntroductionYour extends StatefulWidget {
@@ -73,11 +74,10 @@ class _IntroductionYourState extends State<IntroductionYour> {
                 ),
                 TextButton(
                   onPressed: (){
-                    Func.movePage(context, Login());
+                    Func.movePage(context, IntroductionIcon());
                   },
                   child: Text('OK'),
                 )
-
               ],
             ),
           ),
