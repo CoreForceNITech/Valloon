@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_plus/share_plus.dart';
 
 class Func {
   static EdgeInsets paddingSize() {
-    return EdgeInsets.all(8);
+    return EdgeInsets.all(8.w);
   }
 
   static void _share() =>
@@ -16,14 +17,12 @@ class Func {
     );
   }
 
-  static PreferredSizeWidget? myAppBar(String text) {
+  static PreferredSizeWidget? myAppBar() {
     return AppBar(
-      title: Text(
-        text,
-        style: const TextStyle(
-          color: Colors.black,
-          fontWeight: FontWeight.bold,
-        ),
+      backgroundColor: Colors.white,
+      shadowColor: Colors.white,
+      iconTheme: IconThemeData(
+        color: Colors.green,
       ),
       //共有(share)のボタン
       actions: [

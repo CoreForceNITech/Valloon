@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/pages/introduction_name.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -85,13 +86,16 @@ class _LoginState extends State<Login> {
                             Container(
                               height: 63.365.w,
                               width: 148.125.w,
-                              child: RaisedButton(
+                              child: ElevatedButton(
                                 child: Text(
                                   'Login',
                                   style: TextStyle(
                                     color: Colors.green,
                                     fontWeight: FontWeight.bold,
                                   ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white
                                 ),
                                 onPressed: () {
                                   Func.movePage(context, Login());
@@ -101,7 +105,7 @@ class _LoginState extends State<Login> {
                             Container(
                               height: 63.365.w,
                               width: 148.125.w,
-                              child: RaisedButton(
+                              child: ElevatedButton(
                                 child: Text(
                                   'Sign Up',
                                   style: TextStyle(
@@ -109,8 +113,11 @@ class _LoginState extends State<Login> {
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.white
+                                ),
                                 onPressed: () {
-                                  Func.movePage(context, Login());
+                                      Func.movePage(context, IntroductionName());
                                 },
                               ),
                             ),
