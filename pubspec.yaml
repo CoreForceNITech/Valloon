@@ -1,3 +1,11 @@
+##name
+##description
+##environment
+##dependencies
+##dev_dependencies
+##flutter
+
+
 name: valloon
 description: A new Flutter project.
 
@@ -14,6 +22,7 @@ dependencies:
 
   share_plus: ^3.1.0
   get: ^4.1.4
+  flutter_svg: ^1.0.3
 
   cupertino_icons: ^1.0.2
   flutter_screenutil: ^5.4.0+1

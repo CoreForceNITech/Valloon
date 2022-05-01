@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/size_config.dart';
 
@@ -39,7 +40,8 @@ class _LoginState extends State<Login> {
                 ),
                 Container(
                   height: SizeConfig.blockSizeVertical! * 40,
-                  child: Image.asset('lib/images/valloon_demo1.png'),
+                  child: SvgPicture.asset('lib/images/valloon.svg',
+                      width: 320, height: 320),
                 ),
                 Container(
                   height: SizeConfig.blockSizeVertical! * 5,
