@@ -5,6 +5,8 @@ import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/login.dart';
 
+import '../In_Out/In.dart';
+
 class HelloVallon extends StatefulWidget {
   @override
   _HelloVallonState createState() => _HelloVallonState();
@@ -40,16 +42,16 @@ class _HelloVallonState extends State<HelloVallon> {
                   height: 266.8.h,
                   width: 266.8.w,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    //color: Colors.white,
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                 ),
                 Container(
                   height: 33.35.h,
                 ),
-                Func.continueNicknameBotton(context, Login()),
+                Func.continueNicknameBotton(context, In()),
                 MyWidget.height33_35(),
-                Func.continueFullnameBotton(context, Login()),
+                Func.continueFullnameBotton(context, In()),
               ],
             ),
             Column(

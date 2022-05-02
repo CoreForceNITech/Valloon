@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
-import 'package:valloon/pages/introduction_birthday.dart';
-import 'package:valloon/pages/introduction_your.dart';
 import 'package:valloon/pages/login.dart';
+
+import 'Introduction_birthday.dart';
 
 class IntroductionName extends StatefulWidget {
   @override
@@ -62,7 +62,8 @@ class _IntroductionNameState extends State<IntroductionName> {
                   ),
                 ),
                 MyWidget.height66_7(),
-                Func.smallNextReturnProcess(context, Login(), IntroductionBirthday())
+                Func.smallNextReturnProcess(
+                    context, Login(), IntroductionBirthday())
               ],
             ),
           ),

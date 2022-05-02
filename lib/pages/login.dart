@@ -25,7 +25,7 @@ class _LoginState extends State<Login> {
             Column(
               children: [
                 Container(
-                  height: 400.2.h,
+                  height: 460.2.h,
                   width: double.infinity,
                   color: Colors.green,
                 )
@@ -35,17 +35,17 @@ class _LoginState extends State<Login> {
               children: [
                 MyWidget.height66_7(),
                 Container(
-                  height: 266.8.h,
+                  height: 260.8.h,
                   width: 266.8.w,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    //color: Colors.white,
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                 ),
                 MyWidget.height33_35(),
                 Container(
-                  height: 201.h,
-                  width: 300.w,
+                  height: 183.h,
+                  width: 322.0.w,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(width: 1),
@@ -55,14 +55,24 @@ class _LoginState extends State<Login> {
                     child: Column(
                       children: <Widget>[
                         Container(
-                          height: 133.4.h,
-                          width: 300.w,
+                          height: 120.h,
+                          width: 320.w,
+                          decoration: BoxDecoration(boxShadow: [
+                            BoxShadow(
+                              color: Colors.white24,
+                              spreadRadius: 5,
+                              blurRadius: 5,
+                              offset: Offset(1, 1),
+                            )
+                          ]),
                           child: Column(
                             children: <Widget>[
+                              MyWidget.height33_35(),
                               Func.title('Valloon'),
                               Text(
                                 '',
                               ),
+                              //MyWidget.height16_675(),
                               Text(
                                 'サービスの利用を開始するためには、\nサインアップ(ログイン)が必要です。',
                                 textAlign: TextAlign.center,
@@ -73,36 +83,51 @@ class _LoginState extends State<Login> {
                         Row(
                           children: <Widget>[
                             Container(
-                              height: 63.365.h,
-                              width: 148.125.w,
+                              height: 60.h,
+                              width: 160.0.w,
                               child: ElevatedButton(
                                 child: Text(
                                   'Login',
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.white),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(0),
+                                      topLeft: Radius.circular(0),
+                                      bottomLeft: Radius.circular(10),
+                                      bottomRight: Radius.circular(0),
+                                    ),
+                                  ),
+                                ),
                                 onPressed: () {
                                   Func.movePage(context, Login());
                                 },
                               ),
                             ),
                             Container(
-                              height: 63.365.h,
-                              width: 148.125.w,
+                              height: 60.h,
+                              width: 160.w,
                               child: ElevatedButton(
                                 child: Text(
                                   'Sign Up',
                                   style: TextStyle(
-                                    color: Colors.green,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(0),
+                                      topLeft: Radius.circular(0),
+                                      bottomLeft: Radius.circular(0),
+                                      bottomRight: Radius.circular(10),
+                                    ),
+                                  ),
                                 ),
                                 onPressed: () {
                                   Func.movePage(context, IntroductionName());

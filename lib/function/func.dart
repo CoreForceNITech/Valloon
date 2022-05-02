@@ -4,8 +4,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:valloon/function/mywidget.dart';
 
 class Func {
-
-  static Row smallNextReturnProcess(BuildContext context, StatefulWidget returnPage, StatefulWidget nextPage){
+  static Row smallNextReturnProcess(BuildContext context,
+      StatefulWidget returnPage, StatefulWidget nextPage) {
     return Row(
       children: <Widget>[
         MyWidget.width37_5(),
@@ -58,24 +58,24 @@ class Func {
 
   static Container smallNextButton(BuildContext context, StatefulWidget page) {
     return haveTextButton(
-        context, page, 66.7.h, 112.5.w, '次へ', Colors.green, Colors.white);
+        context, page, 44.7.h, 112.5.w, '次へ', Colors.green, Colors.white);
   }
 
   static Container consentButton(BuildContext context, StatefulWidget page) {
     return haveTextButton(
-        context, page, 66.7.h, 225.w, '同意して登録', Colors.green, Colors.white);
+        context, page, 44.7.h, 225.w, '同意して登録', Colors.green, Colors.white);
   }
 
   static Container smallReturnButton(
       BuildContext context, StatefulWidget page) {
     return haveTextButton(
-        context, page, 66.7.h, 112.5.w, '戻る', Colors.grey, Colors.white);
+        context, page, 44.7.h, 112.5.w, '戻る', Colors.grey, Colors.white);
   }
 
   static Container largeReturnButton(
       BuildContext context, StatefulWidget page) {
     return haveTextButton(
-        context, page, 66.7.h, 225.w, '戻る', Colors.grey, Colors.white);
+        context, page, 44.7.h, 225.w, '戻る', Colors.grey, Colors.white);
   }
 
   static Container startLoginButton(BuildContext context, StatefulWidget page) {
@@ -111,9 +111,6 @@ class Func {
     return Container(
       height: _height,
       width: _width,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(180.r),
-      ),
       child: SizedBox(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

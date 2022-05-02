@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:valloon/function/func.dart';
-import 'package:valloon/pages/introduction_name.dart';
-import 'package:valloon/pages/introduction_your.dart';
 import 'package:valloon/pages/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+
+import 'Introduction_name.dart';
+import 'Introduction_your.dart';
 
 class IntroductionBirthday extends StatefulWidget {
   @override
@@ -66,9 +67,9 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
                     );
                   },
                 ),
-                if(targetday != null)
-                  Text('誕生日: $targetday'),
-                Func.smallNextReturnProcess(context, IntroductionName(), IntroductionYour())
+                if (targetday != null) Text('誕生日: $targetday'),
+                Func.smallNextReturnProcess(
+                    context, IntroductionName(), IntroductionYour())
               ],
             ),
           ),

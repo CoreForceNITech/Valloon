@@ -52,7 +52,7 @@ class _OutState extends State<Out> {
                 ),
                 //Container -> 退室中
                 Container(
-                  height: 183.w,
+                  height: 183.h,
                   width: 320.w,
                   decoration: BoxDecoration(
                     color: Colors.white70,
@@ -65,7 +65,7 @@ class _OutState extends State<Out> {
                   child: Center(
                     child: Column(
                       children: <Widget>[
-                        //Container -> "退室中"のWidget
+                        //Container -> "入室中"のWidget
                         Container(
                           height: 100.h,
                           width: 320.w,
