@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
-import 'package:valloon/pages/Introduction/Introduction_birthday.dart';
+import 'package:valloon/pages/introduction_birthday.dart';
+import 'package:valloon/pages/introduction_your.dart';
 import 'package:valloon/pages/login.dart';
 
 class IntroductionName extends StatefulWidget {
@@ -62,14 +62,7 @@ class _IntroductionNameState extends State<IntroductionName> {
                   ),
                 ),
                 MyWidget.height66_7(),
-                Row(
-                  children: <Widget>[
-                    MyWidget.width37_5(),
-                    Func.smallReturnButton(context, Login()),
-                    MyWidget.width75(),
-                    Func.smallNextButton(context, IntroductionBirthday()),
-                  ],
-                ),
+                Func.smallNextReturnProcess(context, Login(), IntroductionBirthday())
               ],
             ),
           ),

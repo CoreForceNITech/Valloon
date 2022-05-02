@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:valloon/function/mywidget.dart';
 
 class Func {
+
+  static Row smallNextReturnProcess(BuildContext context, StatefulWidget returnPage, StatefulWidget nextPage){
+    return Row(
+      children: <Widget>[
+        MyWidget.width37_5(),
+        Func.smallReturnButton(context, returnPage),
+        MyWidget.width75(),
+        Func.smallNextButton(context, nextPage),
+      ],
+    );
+  }
+
   //プライバシーポリシーと利用規約の同意用文章の手順的結合モジュール
   static Widget consentProcess(BuildContext context, StatefulWidget page) {
     return Column(

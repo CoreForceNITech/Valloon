@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:valloon/function/func.dart';
-import 'package:valloon/pages/Introduction/Introduction_your.dart';
+import 'package:valloon/pages/introduction_name.dart';
+import 'package:valloon/pages/introduction_your.dart';
 import 'package:valloon/pages/login.dart';
-
-import 'Introduction_name.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 class IntroductionBirthday extends StatefulWidget {
   @override
@@ -25,6 +27,8 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
     super.dispose();
   }
 
+  var targetday;
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -42,12 +46,29 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Func.title('誕生日の設定'),
-                TextButton(
+                ElevatedButton(
+                  child: Text('クリックして設定'),
                   onPressed: () {
-                    Func.movePage(context, IntroductionYour());
+                    DatePicker.showDatePicker(
+                      context,
+                      showTitleActions: true,
+                      minTime: DateTime(1920, 1, 1),
+                      maxTime: DateTime(2022, 12, 31),
+                      onConfirm: (date) {
+                        setState(
+                          () {
+                            targetday = date;
+                          },
+                        );
+                      },
+                      currentTime: targetday,
+                      locale: LocaleType.jp,
+                    );
                   },
-                  child: Text('OK'),
-                )
+                ),
+                if(targetday != null)
+                  Text('誕生日: $targetday'),
+                Func.smallNextReturnProcess(context, IntroductionName(), IntroductionYour())
               ],
             ),
           ),
