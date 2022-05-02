@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
-import 'package:valloon/pages/introduction_birthday.dart';
-import 'package:valloon/pages/introduction_your.dart';
+import 'package:valloon/pages/Introduction/introduction_birthday.dart';
 import 'package:valloon/pages/login.dart';
 
 class IntroductionName extends StatefulWidget {

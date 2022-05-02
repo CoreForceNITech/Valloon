@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:valloon/function/func.dart';
-import 'package:valloon/pages/introduction_name.dart';
-import 'package:valloon/pages/introduction_your.dart';
-import 'package:valloon/pages/login.dart';
+import 'package:valloon/pages/Introduction/introduction_name.dart';
+import 'package:valloon/pages/Introduction/introduction_your.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
