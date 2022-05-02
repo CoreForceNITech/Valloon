@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
-import 'package:valloon/pages/introduction_birthday.dart';
 import 'package:valloon/pages/login.dart';
 
 class HelloVallon extends StatefulWidget {
@@ -68,8 +67,7 @@ class _HelloVallonState extends State<HelloVallon> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.white),
+                      style: ElevatedButton.styleFrom(primary: Colors.white),
                       onPressed: () async {
                         await Func.movePage(context, Login());
                       },
@@ -95,8 +93,7 @@ class _HelloVallonState extends State<HelloVallon> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          primary: Colors.white),
+                      style: ElevatedButton.styleFrom(primary: Colors.white),
                       onPressed: () async {
                         await Func.movePage(context, Login());
                       },

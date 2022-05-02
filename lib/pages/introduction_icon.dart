@@ -19,7 +19,6 @@ class _IntroductionIconState extends State<IntroductionIcon> {
         return await Func.movePage(context, IntroductionYour());
       },
       child: Scaffold(
-        appBar: Func.myAppBar(),
         body: Container(
           width: double.infinity,
           padding: Func.paddingSize(),
@@ -27,6 +26,9 @@ class _IntroductionIconState extends State<IntroductionIcon> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                Container(
+                  height: 16.675.h,
+                ),
                 Func.title('あなたのアイコン!!'),
                 Text(''),
                 Text(
@@ -125,6 +127,10 @@ class _IntroductionIconState extends State<IntroductionIcon> {
                   ),
                 ),
                 Func.consentProcess(context, HelloVallon()),
+                Container(
+                  height: 16.675.h,
+                ),
+                Func.largeReturnButton(context, IntroductionYour())
               ],
             ),
           ),

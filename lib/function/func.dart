@@ -9,7 +9,7 @@ class Func {
       children: <Widget>[
         consentMessage(context),
         Container(
-          height: 33.35.h,
+          height: 16.675.h,
         ),
         consentButton(context, page),
       ],
@@ -43,17 +43,39 @@ class Func {
     );
   }
 
+  static Container smallNextButton(BuildContext context, StatefulWidget page) {
+    return haveTextButton(context, page, 66.7.h, 112.5.w, '次へ', Colors.green);
+  }
+
   static Container consentButton(BuildContext context, StatefulWidget page) {
+    return haveTextButton(context, page, 66.7.h, 225.w, '同意して登録', Colors.green);
+  }
+
+  static Container smallReturnButton(
+      BuildContext context, StatefulWidget page) {
+    return haveTextButton(context, page, 66.7.h, 112.5.w, '戻る', Colors.grey);
+  }
+
+  static Container largeReturnButton(
+      BuildContext context, StatefulWidget page) {
+    return haveTextButton(context, page, 66.7.h, 225.w, '戻る', Colors.grey);
+  }
+
+  static Container haveTextButton(BuildContext context, StatefulWidget page,
+      double _height, double _width, String text, Color color) {
     return Container(
-      height: 66.7.h,
-      width: 225.w,
+      height: _height,
+      width: _width,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(180.r),
       ),
       child: SizedBox(
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            primary: color,
+          ),
           child: Text(
-            '同意して登録',
+            text,
             style: TextStyle(
               fontSize: 24.sp,
             ),

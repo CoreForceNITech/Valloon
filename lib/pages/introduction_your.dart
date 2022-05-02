@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/pages/introduction_birthday.dart';
 import 'package:valloon/pages/introduction_icon.dart';
@@ -72,12 +73,21 @@ class _IntroductionYourState extends State<IntroductionYour> {
                     labelStyle: TextStyle(color: Colors.green),
                   ),
                 ),
-                TextButton(
-                  onPressed: (){
-                    Func.movePage(context, IntroductionIcon());
-                  },
-                  child: Text('OK'),
-                )
+                Container(
+                  height: 66.7.h,
+                ),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      width: 37.5.w,
+                    ),
+                    Func.smallReturnButton(context, IntroductionBirthday()),
+                    Container(
+                      width: 75.w,
+                    ),
+                    Func.smallNextButton(context, IntroductionIcon()),
+                  ],
+                ),
               ],
             ),
           ),

@@ -60,8 +60,21 @@ class _IntroductionNameState extends State<IntroductionName> {
                     labelStyle: TextStyle(color: Colors.green),
                   ),
                 ),
-                Text(''),
-                Func.consentProcess(context, IntroductionBirthday())
+                Container(
+                  height: 66.7.h,
+                ),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      width: 37.5.w,
+                    ),
+                    Func.smallReturnButton(context, Login()),
+                    Container(
+                      width: 75.w,
+                    ),
+                    Func.smallNextButton(context, IntroductionBirthday()),
+                  ],
+                ),
               ],
             ),
           ),
