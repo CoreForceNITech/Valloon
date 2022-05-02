@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/introduction_birthday.dart';
+import 'package:valloon/pages/introduction_icon.dart';
 import 'package:valloon/pages/login.dart';
 
 class IntroductionYour extends StatefulWidget {
@@ -71,13 +74,15 @@ class _IntroductionYourState extends State<IntroductionYour> {
                     labelStyle: TextStyle(color: Colors.green),
                   ),
                 ),
-                TextButton(
-                  onPressed: (){
-                    Func.movePage(context, Login());
-                  },
-                  child: Text('OK'),
-                )
-
+                MyWidget.height66_7(),
+                Row(
+                  children: <Widget>[
+                    MyWidget.width37_5(),
+                    Func.smallReturnButton(context, IntroductionBirthday()),
+                    MyWidget.width75(),
+                    Func.smallNextButton(context, IntroductionIcon()),
+                  ],
+                ),
               ],
             ),
           ),

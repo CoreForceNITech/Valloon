@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/introduction_birthday.dart';
 import 'package:valloon/pages/login.dart';
 
@@ -60,53 +61,14 @@ class _IntroductionNameState extends State<IntroductionName> {
                     labelStyle: TextStyle(color: Colors.green),
                   ),
                 ),
-                Text(''),
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(
-                      style: Theme.of(context).textTheme.bodyText2,
-                      children: const [
-                        TextSpan(
-                          text: '[同意して登録]をタップすると、',
-                        ),
-                        TextSpan(
-                          text: 'プライバシーポリシー',
-                          style: TextStyle(color: Colors.green),
-                        ),
-                        TextSpan(
-                          text: 'と',
-                        ),
-                        TextSpan(
-                          text: '利用規約',
-                          style: TextStyle(color: Colors.green),
-                        ),
-                        TextSpan(
-                          text: 'に同意したことになります。',
-                        ),
-                      ]),
-                ),
-                Container(
-                  height: 66.7.w,
-                ),
-                Container(
-                  height: 66.7.w,
-                  width: 225.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100.w),
-                  ),
-                  child: SizedBox(
-                    child: ElevatedButton(
-                      child: Text(
-                        '同意して登録',
-                        style: TextStyle(
-                          fontSize: 24.sp,
-                        ),
-                      ),
-                      onPressed: () async {
-                        await Func.movePage(context, IntroductionBirthday());
-                      },
-                    ),
-                  ),
+                MyWidget.height66_7(),
+                Row(
+                  children: <Widget>[
+                    MyWidget.width37_5(),
+                    Func.smallReturnButton(context, Login()),
+                    MyWidget.width75(),
+                    Func.smallNextButton(context, IntroductionBirthday()),
+                  ],
                 ),
               ],
             ),
