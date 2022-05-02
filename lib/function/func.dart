@@ -44,33 +44,57 @@ class Func {
   }
 
   static Container smallNextButton(BuildContext context, StatefulWidget page) {
-    return haveTextButton(context, page, 66.7.h, 112.5.w, '次へ', Colors.green);
+    return haveTextButton(
+        context, page, 66.7.h, 112.5.w, '次へ', Colors.green, Colors.white);
   }
 
   static Container consentButton(BuildContext context, StatefulWidget page) {
-    return haveTextButton(context, page, 66.7.h, 225.w, '同意して登録', Colors.green);
+    return haveTextButton(
+        context, page, 66.7.h, 225.w, '同意して登録', Colors.green, Colors.white);
   }
 
   static Container smallReturnButton(
       BuildContext context, StatefulWidget page) {
-    return haveTextButton(context, page, 66.7.h, 112.5.w, '戻る', Colors.grey);
+    return haveTextButton(
+        context, page, 66.7.h, 112.5.w, '戻る', Colors.grey, Colors.white);
   }
 
   static Container largeReturnButton(
       BuildContext context, StatefulWidget page) {
-    return haveTextButton(context, page, 66.7.h, 225.w, '戻る', Colors.grey);
+    return haveTextButton(
+        context, page, 66.7.h, 225.w, '戻る', Colors.grey, Colors.white);
   }
 
-  static Container startLoginButton(BuildContext context, StatefulWidget page){
-    return haveTextButton(context, page, 63.365.h, 148.125.w, 'Login', Colors.white);
+  static Container startLoginButton(BuildContext context, StatefulWidget page) {
+    return haveTextButton(context, page, 63.365.h, 148.125.w, 'Login',
+        Colors.white, Colors.white);
   }
 
-  static Container signUpButton(BuildContext context, StatefulWidget page){
-    return haveTextButton(context, page, 63.365.h, 148.125.w, 'Sign Up', Colors.green);
+  static Container signUpButton(BuildContext context, StatefulWidget page) {
+    return haveTextButton(context, page, 63.365.h, 148.125.w, 'Sign Up',
+        Colors.green, Colors.white);
   }
 
-  static Container haveTextButton(BuildContext context, StatefulWidget page,
-      double _height, double _width, String text, Color color) {
+  static Container continueNicknameBotton(
+      BuildContext context, StatefulWidget page) {
+    return haveTextButton(
+        context, page, 66.7.h, 275.w, 'ニックネームで続ける', Colors.white, Colors.green);
+  }
+
+  static Container continueFullnameBotton(
+      BuildContext context, StatefulWidget page) {
+    return haveTextButton(
+        context, page, 66.7.h, 275.w, 'フルネームで続ける', Colors.white, Colors.green);
+  }
+
+  static Container haveTextButton(
+      BuildContext context,
+      StatefulWidget page,
+      double _height,
+      double _width,
+      String text,
+      Color color,
+      Color textColor) {
     return Container(
       height: _height,
       width: _width,
@@ -88,6 +112,7 @@ class Func {
             style: TextStyle(
               fontSize: 24.sp,
               fontWeight: FontWeight.bold,
+              color: textColor,
             ),
           ),
           onPressed: () async {

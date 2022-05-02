@@ -57,6 +57,13 @@ class MyWidget{
     );
   }
 
+  static Container height150(){
+    return Container(
+      height: 150.h,
+    );
+  }
+
+
   static circle(Color color, double diameter){
     return Container(
       width: diameter,

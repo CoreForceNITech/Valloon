@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/login.dart';
 
 class HelloVallon extends StatefulWidget {
@@ -26,10 +27,7 @@ class _HelloVallonState extends State<HelloVallon> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  height: 66.7.h,
-                  width: double.infinity,
-                ),
+                MyWidget.height66_7(),
                 Text(
                   'Hello![ニックネーム]!!',
                   style: TextStyle(
@@ -37,9 +35,7 @@ class _HelloVallonState extends State<HelloVallon> {
                     color: Colors.white,
                   ),
                 ),
-                Container(
-                  height: 33.35.h,
-                ),
+                MyWidget.height33_35(),
                 Container(
                   height: 266.8.h,
                   width: 266.8.w,
@@ -51,63 +47,14 @@ class _HelloVallonState extends State<HelloVallon> {
                 Container(
                   height: 33.35.h,
                 ),
-                Container(
-                  height: 66.7.h,
-                  width: 275.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(180.r),
-                  ),
-                  child: SizedBox(
-                    child: ElevatedButton(
-                      child: Text(
-                        'ニックネームで続ける',
-                        style: TextStyle(
-                          fontSize: 24.sp,
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(primary: Colors.white),
-                      onPressed: () async {
-                        await Func.movePage(context, Login());
-                      },
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 33.35.h,
-                ),
-                Container(
-                  height: 66.7.h,
-                  width: 275.w,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(180.r),
-                  ),
-                  child: SizedBox(
-                    child: ElevatedButton(
-                      child: Text(
-                        'フルネームで続ける',
-                        style: TextStyle(
-                          fontSize: 24.sp,
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(primary: Colors.white),
-                      onPressed: () async {
-                        await Func.movePage(context, Login());
-                      },
-                    ),
-                  ),
-                ),
+                Func.continueNicknameBotton(context, Login()),
+                MyWidget.height33_35(),
+                Func.continueFullnameBotton(context, Login()),
               ],
             ),
             Column(
               children: <Widget>[
-                Container(
-                  height: 150.h,
-                  width: double.infinity,
-                ),
+                MyWidget.height150(),
                 Container(
                   child: SvgPicture.asset(
                     'lib/images/valloon.svg',
