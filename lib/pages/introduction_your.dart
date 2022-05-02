@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/introduction_birthday.dart';
 import 'package:valloon/pages/introduction_icon.dart';
 import 'package:valloon/pages/login.dart';
@@ -73,18 +74,12 @@ class _IntroductionYourState extends State<IntroductionYour> {
                     labelStyle: TextStyle(color: Colors.green),
                   ),
                 ),
-                Container(
-                  height: 66.7.h,
-                ),
+                MyWidget.height66_7(),
                 Row(
                   children: <Widget>[
-                    Container(
-                      width: 37.5.w,
-                    ),
+                    MyWidget.width37_5(),
                     Func.smallReturnButton(context, IntroductionBirthday()),
-                    Container(
-                      width: 75.w,
-                    ),
+                    MyWidget.width75(),
                     Func.smallNextButton(context, IntroductionIcon()),
                   ],
                 ),

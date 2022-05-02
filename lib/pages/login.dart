@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/introduction_name.dart';
 
 class Login extends StatefulWidget {
@@ -32,10 +33,7 @@ class _LoginState extends State<Login> {
             ),
             Column(
               children: [
-                Container(
-                  height: 66.7.h,
-                  width: double.infinity,
-                ),
+                MyWidget.height66_7(),
                 Container(
                   height: 266.8.h,
                   width: 266.8.w,
@@ -44,10 +42,7 @@ class _LoginState extends State<Login> {
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                 ),
-                Container(
-                  height: 33.35.h,
-                  width: double.infinity,
-                ),
+                MyWidget.height33_35(),
                 Container(
                   height: 201.h,
                   width: 300.w,
@@ -107,7 +102,8 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.white),
+                                    primary: Colors.white,
+                                ),
                                 onPressed: () {
                                   Func.movePage(context, IntroductionName());
                                 },
@@ -123,10 +119,7 @@ class _LoginState extends State<Login> {
             ),
             Column(
               children: <Widget>[
-                Container(
-                  height: 81.7.h,
-                  width: double.infinity,
-                ),
+                MyWidget.height81_7(),
                 Container(
                   child: SvgPicture.asset(
                     'lib/images/valloon.svg',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
+import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/hello_valloon.dart';
 import 'package:valloon/pages/introduction_your.dart';
 import 'package:valloon/pages/login.dart';
@@ -26,11 +27,9 @@ class _IntroductionIconState extends State<IntroductionIcon> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  height: 16.675.h,
-                ),
+                MyWidget.height16_675(),
                 Func.title('あなたのアイコン!!'),
-                Text(''),
+                MyWidget.height16_675(),
                 Text(
                   'お好きなアイコンを選択\nまたはアップロードしてください',
                   style: TextStyle(
@@ -41,46 +40,13 @@ class _IntroductionIconState extends State<IntroductionIcon> {
                   height: 100.h,
                   child: Row(
                     children: <Widget>[
-                      Container(
-                        width: 75.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      Container(
-                        width: 15.w,
-                        color: Colors.white,
-                      ),
-                      Container(
-                        width: 75.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      Container(
-                        width: 15.w,
-                        color: Colors.white,
-                      ),
-                      Container(
-                        width: 75.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      Container(
-                        width: 15.w,
-                        color: Colors.white,
-                      ),
-                      Container(
-                        width: 75.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
+                      MyWidget.circle(Colors.grey, 75.w),
+                      MyWidget.width15(),
+                      MyWidget.circle(Colors.grey, 75.w),
+                      MyWidget.width15(),
+                      MyWidget.circle(Colors.grey, 75.w),
+                      MyWidget.width15(),
+                      MyWidget.circle(Colors.grey, 75.w),
                     ],
                   ),
                 ),
@@ -88,21 +54,9 @@ class _IntroductionIconState extends State<IntroductionIcon> {
                   height: 175.h,
                   child: Row(
                     children: <Widget>[
-                      Container(
-                        width: 20.w,
-                        color: Colors.white,
-                      ),
-                      Container(
-                        width: 150.w,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                      Container(
-                        width: 50.w,
-                        color: Colors.white,
-                      ),
+                      MyWidget.width20(),
+                      MyWidget.circle(Colors.grey, 150.w),
+                      MyWidget.width50(),
                       Container(
                         height: 120.h,
                         width: 80.w,
@@ -127,9 +81,7 @@ class _IntroductionIconState extends State<IntroductionIcon> {
                   ),
                 ),
                 Func.consentProcess(context, HelloVallon()),
-                Container(
-                  height: 16.675.h,
-                ),
+                MyWidget.height16_675(),
                 Func.largeReturnButton(context, IntroductionYour())
               ],
             ),

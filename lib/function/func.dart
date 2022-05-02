@@ -61,6 +61,14 @@ class Func {
     return haveTextButton(context, page, 66.7.h, 225.w, '戻る', Colors.grey);
   }
 
+  static Container startLoginButton(BuildContext context, StatefulWidget page){
+    return haveTextButton(context, page, 63.365.h, 148.125.w, 'Login', Colors.white);
+  }
+
+  static Container signUpButton(BuildContext context, StatefulWidget page){
+    return haveTextButton(context, page, 63.365.h, 148.125.w, 'Sign Up', Colors.green);
+  }
+
   static Container haveTextButton(BuildContext context, StatefulWidget page,
       double _height, double _width, String text, Color color) {
     return Container(
@@ -73,11 +81,13 @@ class Func {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             primary: color,
+            shape: const StadiumBorder(),
           ),
           child: Text(
             text,
             style: TextStyle(
               fontSize: 24.sp,
+              fontWeight: FontWeight.bold,
             ),
           ),
           onPressed: () async {
