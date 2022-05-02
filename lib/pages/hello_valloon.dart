@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:valloon/In_Out/In.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/login.dart';
@@ -47,9 +48,9 @@ class _HelloVallonState extends State<HelloVallon> {
                 Container(
                   height: 33.35.h,
                 ),
-                Func.continueNicknameBotton(context, Login()),
+                Func.continueNicknameBotton(context, In()),
                 MyWidget.height33_35(),
-                Func.continueFullnameBotton(context, Login()),
+                Func.continueFullnameBotton(context, In()),
               ],
             ),
             Column(
