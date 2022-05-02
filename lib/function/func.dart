@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_plus/share_plus.dart';
 
 class Func {
-
   //プライバシーポリシーと利用規約の同意用文章の手順的結合モジュール
   static Widget consentProcess(BuildContext context, StatefulWidget page) {
     return Column(
@@ -49,7 +48,7 @@ class Func {
       height: 66.7.h,
       width: 225.w,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(100.r),
+        borderRadius: BorderRadius.circular(180.r),
       ),
       child: SizedBox(
         child: ElevatedButton(
@@ -66,6 +65,7 @@ class Func {
       ),
     );
   }
+
   //ページの一番上に表示する文字とログイン画面のValloonにおける文字定義
   static Text title(String str) {
     return Text(
@@ -77,10 +77,12 @@ class Func {
       ),
     );
   }
+
   //余白定義
   static EdgeInsets paddingSize() {
     return EdgeInsets.all(8.r);
   }
+
   //共有機能のための関数
   static void _share() =>
       Share.share('みんなもシェアスペースを利用しよう!', subject: 'おすすめのシェアスペース!');
@@ -91,6 +93,7 @@ class Func {
       onPressed: () => _share(),
     );
   }
+
   //Appbarの共通のための関数
   static PreferredSizeWidget? myAppBar() {
     return AppBar(
@@ -105,6 +108,7 @@ class Func {
       ],
     );
   }
+
   //ページ遷移のための関数
   static Future movePage(BuildContext context, var pages) async {
     return await Navigator.push(
