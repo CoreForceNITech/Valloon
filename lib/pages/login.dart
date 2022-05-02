@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
-import 'package:valloon/pages/introduction_name.dart';
+import 'Introduction/Introduction_name.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -102,7 +102,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.white,
+                                  primary: Colors.white,
                                 ),
                                 onPressed: () {
                                   Func.movePage(context, IntroductionName());

@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
-import 'package:valloon/pages/introduction_birthday.dart';
 import 'package:valloon/pages/introduction_icon.dart';
 import 'package:valloon/pages/login.dart';
+
+import 'Introduction_birthday.dart';
 
 class IntroductionYour extends StatefulWidget {
   @override

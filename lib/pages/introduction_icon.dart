@@ -3,8 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/hello_valloon.dart';
-import 'package:valloon/pages/introduction_your.dart';
 import 'package:valloon/pages/login.dart';
+
+import 'Introduction/Introduction_your.dart';
 
 class IntroductionIcon extends StatefulWidget {
   @override

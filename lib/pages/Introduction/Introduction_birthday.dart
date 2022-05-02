@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
-import 'package:valloon/pages/introduction_name.dart';
-import 'package:valloon/pages/introduction_your.dart';
+import 'package:valloon/pages/Introduction/Introduction_your.dart';
 import 'package:valloon/pages/login.dart';
+
+import 'Introduction_name.dart';
 
 class IntroductionBirthday extends StatefulWidget {
   @override
@@ -42,12 +43,11 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
               children: <Widget>[
                 Func.title('誕生日の設定'),
                 TextButton(
-                    onPressed: (){
-                      Func.movePage(context, IntroductionYour());
-                    },
-                    child: Text('OK'),
+                  onPressed: () {
+                    Func.movePage(context, IntroductionYour());
+                  },
+                  child: Text('OK'),
                 )
-
               ],
             ),
           ),

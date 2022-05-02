@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
-import 'package:valloon/pages/introduction_birthday.dart';
+import 'package:valloon/pages/Introduction/Introduction_birthday.dart';
 import 'package:valloon/pages/login.dart';
 
 class IntroductionName extends StatefulWidget {

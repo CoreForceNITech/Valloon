@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:valloon/pages/Introduction/Introduction_name.dart';
+import 'package:valloon/pages/Introduction/Introduction_your.dart';
 import 'package:valloon/pages/login.dart';
 import 'package:get/get.dart';
+
+import '../In_Out/In.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +28,8 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.green,
           ),
-          home: Login(),
+          //home: Login(),
+          home: In(),
         );
       },
     );
