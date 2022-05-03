@@ -6,7 +6,7 @@ import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/login.dart';
 
-import '../In_Out/In.dart';
+import 'package:valloon/In_Out/In.dart';
 
 class HelloVallon extends StatefulWidget {
   @override
