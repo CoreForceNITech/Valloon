@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'Introduction/Introduction_name.dart';
+import 'package:valloon/pages/check_user.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -104,7 +105,7 @@ class _LoginState extends State<Login> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  Func.movePage(context, Login());
+                                  Func.movePage(context, CheckUser());
                                 },
                               ),
                             ),

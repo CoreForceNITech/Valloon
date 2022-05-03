@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:valloon/function/mywidget.dart';
+import 'package:valloon/pages/main.dart';
 
 class Func {
   static Row smallNextReturnProcess(BuildContext context,

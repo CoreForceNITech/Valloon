@@ -1,13 +1,21 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/pages/Introduction/Introduction_name.dart';
 import 'package:valloon/pages/Introduction/Introduction_your.dart';
 import 'package:valloon/pages/login.dart';
 import 'package:get/get.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-import '../In_Out/In.dart';
+import 'package:valloon/In_Out/In.dart';
 
-void main() {
+final FirebaseAuth auth = FirebaseAuth.instance;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
