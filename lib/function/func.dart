@@ -127,7 +127,9 @@ class Func {
             ),
           ),
           onPressed: () async {
-            await Func.movePage(context, page);
+            if(true) {
+              await movePage(context, page);
+            }
           },
         ),
       ),

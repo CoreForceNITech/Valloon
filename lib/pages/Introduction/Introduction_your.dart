@@ -4,6 +4,7 @@ import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/introduction_icon.dart';
 import 'package:valloon/pages/login.dart';
+import 'package:valloon/pages/main.dart';
 
 import 'Introduction_birthday.dart';
 
@@ -48,47 +49,83 @@ class _IntroductionYourState extends State<IntroductionYour> {
           padding: Func.paddingSize(),
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Func.title('あなたのことを教えてください'),
-                TextFormField(
-                  controller: hobbyController,
-                  decoration: const InputDecoration(
-                    hintText: '(例:ゲーム)',
-                    labelText: 'あなたの趣味はなんですか',
-                    labelStyle: TextStyle(color: Colors.green),
-                  ),
-                ),
-                TextFormField(
-                  controller: willdoController,
-                  decoration: const InputDecoration(
-                    hintText: '(例:子どもが欲しい)',
-                    labelText: '将来やりたいことはなんですか',
-                    labelStyle: TextStyle(color: Colors.green),
-                  ),
-                ),
-                TextFormField(
-                  controller: otherController,
-                  decoration: const InputDecoration(
-                    hintText: '(例:気軽に声をかけてください！)',
-                    labelText: '他の人へ一言！',
-                    labelStyle: TextStyle(color: Colors.green),
-                  ),
-                ),
-                MyWidget.height66_7(),
-                Row(
-                  children: <Widget>[
-                    MyWidget.width37_5(),
-                    Func.smallReturnButton(context, IntroductionBirthday()),
-                    MyWidget.width75(),
-                    Func.smallNextButton(context, IntroductionIcon()),
-                  ],
-                ),
-              ],
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+            Func.title('あなたのことを教えてください'),
+            TextFormField(
+              controller: hobbyController,
+              decoration: const InputDecoration(
+                hintText: '(例:ゲーム)',
+                labelText: 'あなたの趣味はなんですか',
+                labelStyle: TextStyle(color: Colors.green),
+              ),
             ),
+            TextFormField(
+              controller: willdoController,
+              decoration: const InputDecoration(
+                hintText: '(例:子どもが欲しい)',
+                labelText: '将来やりたいことはなんですか',
+                labelStyle: TextStyle(color: Colors.green),
+              ),
+            ),
+            TextFormField(
+              controller: otherController,
+              decoration: const InputDecoration(
+                hintText: '(例:気軽に声をかけてください！)',
+                labelText: '他の人へ一言！',
+                labelStyle: TextStyle(color: Colors.green),
+              ),
+            ),
+            MyWidget.height66_7(),
+            Row(
+                children: <Widget>[
+                MyWidget.width37_5(),
+            Func.smallReturnButton(context, IntroductionBirthday()),
+            MyWidget.width75(),
+            Container(
+              height: 44.7.h,
+              width: 112.5.w,
+              child: SizedBox(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green,
+                    shape: const StadiumBorder(),
+                  ),
+                  child: Text(
+                    '次へ',
+                    style: TextStyle(
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () async {
+                    _hobby = hobbyController.text;
+                    _willdo = willdoController.text;
+                    _other = otherController.text;
+                    if (!(_hobby == '' || _willdo == '' || _other == '')) {
+                      try {
+                        await users.add({
+                          'hobby': _hobby,
+                          'willdo': _willdo,
+                          'other': _other,
+                        });
+                        await Func.movePage(context, IntroductionIcon());
+                      } catch (e) {
+                        print(e.toString());
+                      }
+                    }
+                  },
+                ),
+              ),
+            ),
+            ],
           ),
+          ],
         ),
       ),
+    ),)
+    ,
     );
   }
 }

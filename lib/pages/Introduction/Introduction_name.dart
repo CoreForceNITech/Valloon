@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:valloon/function/func.dart';
 import 'package:valloon/function/mywidget.dart';
 import 'package:valloon/pages/login.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:valloon/pages/main.dart';
 import 'Introduction_birthday.dart';
+import 'package:valloon/pages/login.dart';
 
 class IntroductionName extends StatefulWidget {
   @override
@@ -62,8 +64,48 @@ class _IntroductionNameState extends State<IntroductionName> {
                   ),
                 ),
                 MyWidget.height66_7(),
-                Func.smallNextReturnProcess(
-                    context, Login(), IntroductionBirthday())
+                Row(
+                  children: <Widget>[
+                    MyWidget.width37_5(),
+                    Func.smallReturnButton(context, Login()),
+                    MyWidget.width75(),
+                    Container(
+                      height: 44.7.h,
+                      width: 112.5.w,
+                      child: SizedBox(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.green,
+                            shape: const StadiumBorder(),
+                          ),
+                          child: Text(
+                            '次へ',
+                            style: TextStyle(
+                              fontSize: 24.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          onPressed: () async {
+                            _surname = surnameController.text;
+                            _name = nameController.text;
+                            if (!(_surname == '' || _name == '')) {
+                              try {
+                                await users.add({
+                                  'surname': _surname,
+                                  'name': _name,
+                                });
+                                await Func.movePage(context, IntroductionBirthday());
+                              } catch (e) {
+                                print(e.toString());
+                              }
+                            }
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

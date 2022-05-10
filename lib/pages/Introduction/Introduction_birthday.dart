@@ -5,6 +5,8 @@ import 'package:valloon/function/func.dart';
 import 'package:valloon/pages/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:valloon/function/mywidget.dart';
+import 'package:valloon/pages/main.dart';
 
 import 'Introduction_name.dart';
 import 'Introduction_your.dart';
@@ -49,7 +51,7 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
                 Func.title('誕生日の設定'),
                 ElevatedButton(
                   child: Text('クリックして設定'),
-                  onPressed: () {
+                  onPressed: () async {
                     DatePicker.showDatePicker(
                       context,
                       showTitleActions: true,
@@ -57,7 +59,7 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
                       maxTime: DateTime(2022, 12, 31),
                       onConfirm: (date) {
                         setState(
-                          () {
+                              () {
                             targetday = date;
                           },
                         );
@@ -65,11 +67,50 @@ class _IntroductionBirthdayState extends State<IntroductionBirthday> {
                       currentTime: targetday,
                       locale: LocaleType.jp,
                     );
+                    _birthday = targetday;
                   },
                 ),
-                if (targetday != null) Text('誕生日: $targetday'),
-                Func.smallNextReturnProcess(
-                    context, IntroductionName(), IntroductionYour())
+                if (targetday != null)
+                    Text('誕生日: $targetday'),
+                Row(
+                  children: <Widget>[
+                    MyWidget.width37_5(),
+                    Func.smallReturnButton(context, IntroductionName()),
+                    MyWidget.width75(),
+                    Container(
+                      height: 44.7.h,
+                      width: 112.5.w,
+                      child: SizedBox(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.green,
+                            shape: const StadiumBorder(),
+                          ),
+                          child: Text(
+                            '次へ',
+                            style: TextStyle(
+                              fontSize: 24.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          onPressed: () async {
+                            if (targetday != null) {
+                              try {
+                                await users.add({
+                                  '_birthday': _birthday,
+                                });
+                                await Func.movePage(context, IntroductionYour());
+                              } catch (e) {
+                                print(e.toString());
+                              }
+                            }
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
