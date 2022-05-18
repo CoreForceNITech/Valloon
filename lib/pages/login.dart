@@ -75,7 +75,7 @@ class _LoginState extends State<Login> {
                               ),
                               //MyWidget.height16_675(),
                               Text(
-                                'サービスの利用を開始するためには、\nサインアップ(ログイン)が必要です。',
+                                'サービスの利用を開始するためには、\nサインイン(ログイン)が必要です。',
                                 textAlign: TextAlign.center,
                               ),
                             ],
