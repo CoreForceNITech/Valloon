@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:valloon/pages/main.dart';
 import 'Introduction_birthday.dart';
 import 'package:valloon/pages/login.dart';
+import 'package:valloon/pages/register.dart';
 
 class IntroductionName extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class _IntroductionNameState extends State<IntroductionName> {
     return WillPopScope(
       onWillPop: () async {
         //押したら反応するコード
-        return await Func.movePage(context, Login());
+        return await Func.movePage(context, Register());
       },
       child: Scaffold(
         appBar: Func.myAppBar(),
